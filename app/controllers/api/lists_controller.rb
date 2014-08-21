@@ -2,6 +2,10 @@ module Api
   class ListsController < ApiController
     before_action :require_board_member!
 
+    def index
+      render json: Board.find(params[:board_id]).lists
+    end
+
     def create
       @list = current_board.lists.new(list_params)
 
