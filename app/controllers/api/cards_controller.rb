@@ -26,6 +26,11 @@ module Api
       end
     end
 
+    def destroy
+      Card.delete(params[:id])
+      render json: {}
+    end
+
     private
 
     def current_list

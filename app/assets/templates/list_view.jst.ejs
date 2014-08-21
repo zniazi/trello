@@ -1,0 +1,17 @@
+<li>
+  <h3><%= list.escape("title") %></h3>
+  <ul class="cards">
+  </ul>
+
+  <form class="hidden">
+    <label> Title<br>
+      <input name="title" type="text">
+    </label>
+    <label> Description<br>
+      <textarea name="description"></textarea>
+    </label>
+    <button>Create</button>
+  </form>
+
+  <button class="add-card" data-id="<%= list.id %>">Add a card...</button>
+</li>

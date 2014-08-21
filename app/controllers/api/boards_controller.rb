@@ -26,6 +26,7 @@ module Api
 
       if @board.is_member?(current_user)
         render :show
+        #json: @board, include: { lists: {include: { cards: {include: :items}}} }
       else
         render json: ["You aren't a member of this board"], status: 403
       end
